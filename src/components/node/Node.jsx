@@ -113,9 +113,9 @@ export default class Node extends React.Component {
       const transform = `translate(${tx},${ty})`;
 
       label = (
-        <text {...textProps} transform={transform}>
+        <label {...textProps} transform={transform}>
           {this.props.label}
-        </text>
+        </label>
       );
 
       // By default, if a view generator is set, it takes precedence over any svg image url
@@ -146,7 +146,7 @@ export default class Node extends React.Component {
       nodeProps.stroke = this.props.stroke;
       nodeProps.strokeWidth = this.props.strokeWidth;
 
-      label = <text {...textProps}>{this.props.label}</text>;
+      label = <label {...textProps}>{this.props.label}</label>;
       node = <path {...nodeProps} />;
     }
 
